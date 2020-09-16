@@ -48,6 +48,11 @@ int Pop(PPNODE Head)
     {
         return -1;
     }
+    else if(Temp->next==NULL)
+    {
+        free(Temp);
+        Head = NULL;
+    }
     else
     {
         iNo = (*Head)->iData;
